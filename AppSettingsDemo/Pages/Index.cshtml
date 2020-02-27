@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>@Configuration.GetSection("GetSection")["GetSection-One"]</p>
+    <p>@Configuration.GetSection("GetSection")["GetSection-Two"]</p>
+    <br />
+    <p>@Configuration.GetValue("GetValue-One", "GetValue-One-Default")</p>
+    <p>@Configuration.GetValue("GetValue-Two", "GetValue-Two-Default")</p>
+    <br />
+    <p>@Configuration.GetSection("GetSection:GetSection-Nested")["GetSection-Nested-One"]</p>
+    <br />
+    <p>@Configuration.GetValue("GetValue-Nested:GetValue-Nested-One", "GetValue-Nested-One-Default")</p>
+    <br />
+    <a href="https://github.com/Duenke/AppSettingsDemo.git">GitHub repo for this demo!</a>
+</div>
